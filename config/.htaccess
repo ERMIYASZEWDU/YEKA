@@ -1,0 +1,2 @@
+# Private files: never serve them directly over the web.
+Require all denied
