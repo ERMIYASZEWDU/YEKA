@@ -1,9 +1,14 @@
 <?php
 declare(strict_types=1);
+// Default local XAMPP settings. On a real host, copy config/db.local.example.php
+// to config/db.local.php and put the host's MySQL details there (it is not uploaded to GitHub).
 $host = '127.0.0.1';
 $dbname = 'yeka_college_db';
 $username = 'root';
-$password = ''; // Default local XAMPP only. Set a strong DB user/password on production hosting.
+$password = '';
+if (is_file(__DIR__ . '/db.local.php')) {
+    require __DIR__ . '/db.local.php';
+}
 $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

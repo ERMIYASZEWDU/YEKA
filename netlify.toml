@@ -1,0 +1,9 @@
+# Netlify cannot run PHP/MySQL. Publish only a static placeholder page so the
+# PHP source (including config/) is never served publicly from Netlify.
+[build]
+  publish = "netlify-static"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
