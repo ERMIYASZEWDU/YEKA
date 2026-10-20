@@ -55,3 +55,10 @@ LANGUAGE SETTINGS
 - The navigation displays both language choices at the same time.
 - Visitors can select አማርኛ or English whenever they want.
 - Amharic is used only as the initial display for a first visit; visitors can immediately choose English.
+
+PUBLIC HOSTING (INFINITYFREE / CPANEL)
+- Netlify cannot run PHP or MySQL. Netlify only shows the placeholder page in netlify-static/.
+- Create a MySQL database in the host's control panel, then in phpMyAdmin select it and Import database/yeka_college.sql.
+- Copy config/db.local.example.php to config/db.local.php and fill in the host's MySQL host, database name, username and password. db.local.php is ignored by Git, so the password never goes to GitHub.
+- Upload all files (except database/, netlify-static/, netlify.toml) into htdocs, run setup_admin.php once, then delete setup_admin.php.
+- config/, includes/ and database/ contain .htaccess files that block direct web access on Apache hosts. Upload them too (enable "show hidden files" in File Manager/FileZilla).

@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS yeka_college_db
-  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE yeka_college_db;
+-- Select your database in phpMyAdmin first (left sidebar), then Import this file.
+-- Shared hosts (InfinityFree, cPanel) create the database for you and do not allow
+-- CREATE DATABASE / USE. For local XAMPP, create a database named yeka_college_db first.
 
 CREATE TABLE IF NOT EXISTS admins (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
