@@ -1,0 +1,68 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Ethiopic",sans-serif;line-height:1.6;color:#243246;background:#f5f7fa}a{color:#075b91;text-decoration:none}a:hover{text-decoration:underline}.site-header{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:18px max(5%,calc((100% - 1160px)/2));background:#123b5d;color:#fff;flex-wrap:wrap}.brand{display:flex;gap:12px;align-items:center}.brand strong{display:block;font-size:1.1rem}.brand small{display:block;color:#d7e6f1}.college-logo{width:64px;height:64px;object-fit:contain;background:#fff;border-radius:10px;padding:2px;flex-shrink:0}.nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.nav a,.site-footer a{color:#fff}.nav .lang-link{border:1px solid #c7d9e7;border-radius:7px;padding:5px 10px}.container{max-width:1160px;margin:0 auto;padding:28px 20px 50px}.hero{padding:60px 36px;border-radius:18px;background:linear-gradient(120deg,#123b5d,#176a8c);color:white}.hero h1{font-size:clamp(2rem,4vw,3.25rem);line-height:1.15;max-width:760px;margin:0 0 18px}.hero p{max-width:700px;font-size:1.1rem;color:#e6f1f7}.button,.button-secondary,button{display:inline-block;border:0;border-radius:8px;padding:11px 17px;font-weight:700;cursor:pointer;background:#e7a93b;color:#192b3a}.button-secondary{background:#123b5d;color:#fff}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:36px}.section-heading h2{margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:20px;box-shadow:0 3px 12px #142b3d0a}.card h3{margin-top:0}.muted{color:#637286}.date{font-size:.9rem;color:#637286}.site-footer{background:#102f49;color:white;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:28px max(5%,calc((100% - 1160px)/2))}.site-footer p{margin:4px 0;color:#d5e0e8}.form-card{max-width:680px;margin:20px auto;background:white;padding:26px;border-radius:12px;border:1px solid #e0e6ec}.field{margin:14px 0}.field label{display:block;font-weight:700;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;padding:11px;border:1px solid #bdc9d5;border-radius:7px;font:inherit}.field textarea{min-height:150px}.notice{padding:12px 15px;border-radius:8px;background:#e5f4e8;color:#225c2b;margin:14px 0}.error{background:#fff0ef;color:#8a2822}.table-wrap{overflow-x:auto;background:#fff;border-radius:10px;border:1px solid #dce4eb}.table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;padding:12px;border-bottom:1px solid #e4e9ee;vertical-align:top}.table th{background:#eaf0f5}.actions{display:flex;gap:10px;flex-wrap:wrap}.inline-form{display:inline}.pill{display:inline-block;padding:3px 9px;border-radius:20px;background:#e5f4e8;font-size:.85rem}.pill.draft{background:#fff1d5}.pagination{display:flex;gap:8px;justify-content:center;margin:24px}.empty{padding:30px;text-align:center;background:#fff;border-radius:10px}.admin-top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:20px}@media(max-width:760px){.site-header{align-items:flex-start}.nav{gap:12px}.grid{grid-template-columns:1fr}.hero{padding:38px 22px}.container{padding:20px 14px 35px}.site-footer{padding:24px 20px}}
+
+.admin-brand{display:flex;align-items:center;gap:12px;margin:0 0 22px;color:#123b5d;font-size:1.15rem}.admin-brand img{width:58px;height:58px;object-fit:contain;border-radius:8px;background:#fff;padding:2px}
+
+
+/* College entrance background on every public page */
+body {
+  background-image: linear-gradient(rgba(245,247,250,.88), rgba(245,247,250,.88)), url("college-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.site-header, .site-footer {
+  background-color: rgba(18,59,93,.97);
+}
+.card, .form-card, .table-wrap, .empty {
+  background-color: rgba(255,255,255,.94);
+}
+
+
+/* Stronger visibility for the college background image */
+body {
+  background-image: linear-gradient(rgba(245,247,250,.30), rgba(245,247,250,.30)), url("college-background.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+.card, .form-card, .table-wrap, .empty {
+  background-color: rgba(255,255,255,.82) !important;
+  backdrop-filter: blur(1px);
+}
+
+/* Bold, colorful headings and page titles across the public site and admin pages */
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+h1 {
+  color: #075b91;
+  text-shadow: 0 1px 0 rgba(255,255,255,.45);
+}
+h2 {
+  color: #a85d00;
+}
+h3 {
+  color: #176a8c;
+}
+.hero h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,.22);
+}
+.admin-brand strong {
+  color: #075b91;
+  font-weight: 800;
+}
+.section-heading h2 {
+  border-bottom: 3px solid #e7a93b;
+  padding-bottom: 5px;
+}
+
+
+/* Bilingual language selector: both choices remain visible and optional */
+.language-picker { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.language-label { font-weight: 700; }
+.language-picker .lang-link { display: inline-block; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: 700; }
+.language-picker .lang-link.active { background: #e8f0ff; color: #1247a6; outline: 1px solid #9bbaf4; }
